@@ -7,22 +7,22 @@ const questions = [
     options: [
       "Fancy Restaurant 🍷", 
       "Home-cooked Meal 🧑🍳", 
-      "Taco Truck Adventure 🌮"
+      "Food Truck Adventure 🌮"
     ]
   },
   {
     question: "Purr... Choose our activity:",
     options: [
       "Cozy Movie Night 🍿", 
-      "Arcade Battle 👾", 
-      "Moonlit Walk 🌙"
+      "A stardew valley date 🌾", 
+      "A beach walk at sunset 🌅"
     ]
   },
   {
     question: "Final Decision! Dessert?",
     options: [
-      "Chocolate Fondue 🍫", 
-      "Ice Cream Sundae 🍨", 
+      "Waffles with Ice Cream 🍦", 
+      "Lots of Chocolate 🍫", 
       "Maria's Cat Treats 🐾"
     ]
   }
