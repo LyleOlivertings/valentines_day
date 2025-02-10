@@ -7,6 +7,7 @@ import { useWindowSize } from "@react-hook/window-size";
 import { FiHeart } from "react-icons/fi";
 import Questionnaire from "../components/Questionnaire";
 import MusicPlayer from '../components/MusicPlayer';
+import MemoryGallery from '../components/MemoryGallery';
 
 export default function Home() {
   const [answered, setAnswered] = useState(false);
@@ -94,6 +95,12 @@ export default function Home() {
 {answer === 'yes' && (
   <div className="mt-8">
     <MusicPlayer songUrl="/our-song.mp3" />
+  </div>
+)}
+
+{answer === 'yes' && (
+  <div className="mt-8 w-full px-4">
+    <MemoryGallery />
   </div>
 )}
 
