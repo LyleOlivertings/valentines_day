@@ -2,20 +2,72 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Pixel Art Styles */
+.pixel-art {
+  image-rendering: pixelated;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.pixel-font {
+  font-family: 'Press Start 2P', cursive;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.pixel-button {
+  transition: all 0.1s ease;
+  transform: translateY(0);
+  position: relative;
+}
+
+.pixel-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 4px 4px 0px rgba(0,0,0,0.2);
+}
+
+.pixel-button:active {
+  transform: translateY(2px);
+  box-shadow: none;
+}
+
+.maria-sprite {
+  background-image: url('/maria-sprite.png');
+  animation: float 3s ease-in-out infinite;
+}
+
+.dialogue-box {
+  box-shadow: 8px 8px 0px rgba(0,0,0,0.2);
+  position: relative;
+}
+
+/* CRT Effect */
+.crt::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%),
+    linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Animations */
+@keyframes maria-blink {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes text-blink {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.text-blink {
+  animation: text-blink 1.5s infinite;
+}
+
+/* Pixel Borders */
+.pixel-border {
+  border-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAIklEQVQIW2NkQAKrVq36zwjjgzhhYWGMYAEYB8RmROaABADeOQ8CXl/xfgAAAABJRU5ErkJggg==") 4 stretch;
 }
