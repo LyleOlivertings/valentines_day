@@ -71,3 +71,29 @@
 .pixel-border {
   border-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAIklEQVQIW2NkQAKrVq36zwjjgzhhYWGMYAEYB8RmROaABADeOQ8CXl/xfgAAAABJRU5ErkJggg==") 4 stretch;
 }
+
+.pixel-slider {
+  -webkit-appearance: none;
+  width: 80px;
+  height: 8px;
+  background: #4a5568;
+  border-radius: 0;
+  border: 2px solid #2d3748;
+}
+
+.pixel-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 12px;
+  height: 12px;
+  background: #ecc94b;
+  border: 2px solid #2d3748;
+  cursor: pointer;
+}
+
+.pixel-slider::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  background: #ecc94b;
+  border: 2px solid #2d3748;
+  cursor: pointer;
+}
